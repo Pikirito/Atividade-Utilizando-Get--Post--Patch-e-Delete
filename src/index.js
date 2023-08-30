@@ -1,5 +1,5 @@
 const renderProducts = async () => {
-  fetch("http://localhost:3333/products", {
+  await fetch("http://localhost:3333/products", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -32,8 +32,6 @@ function creatProduct(products) {
   });
 }
 
-renderProducts();
-
 /* async function addProduct() {
   await fetch("http://localhost:3333/products", {
     method: "POST",
@@ -51,11 +49,12 @@ renderProducts();
   })
     .then((res) => res.json())
     .catch((erro) => console.error(erro));
-} */
+}
+addProduct(); */
 
-/* async function modifyInfo() {
+async function modifyInfo() {
   await fetch(
-    "http://localhost:3333/products/6b0f0590-78a7-4a04-be4a-2991928f0a72",
+    "http://localhost:3333/products/02882bca-2f98-4208-8a0d-28cfde4a1965",
     {
       method: "PATCH",
       headers: {
@@ -73,9 +72,10 @@ renderProducts();
   )
     .then((res) => res.json())
     .catch((erro) => console.error(erro));
-} */
+}
+await modifyInfo();
 
-/* async function deleteInfo() {
+/*  async function deleteInfo() {
   await fetch(
     "http://localhost:3333/products/6b0f0590-78a7-4a04-be4a-2991928f0a72",
     {
@@ -84,8 +84,6 @@ renderProducts();
   )
     .then((res) => res.json())
     .catch((erro) => console.error(erro));
-}
-modifyInfo();
-renderProducts();
+} */
 
-renderProducts(); */
+await renderProducts();
