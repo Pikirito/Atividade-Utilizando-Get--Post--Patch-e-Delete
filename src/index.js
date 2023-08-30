@@ -61,7 +61,7 @@ async function modifyInfo() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        nome_do_produto: "101 daumatas",
+        nome_do_produto: "laranja mecanica",
         descricao_do_produto: "Filme por Stanley Kubrick",
         preco: 18.0,
         quantidade_em_estoque: 30,
